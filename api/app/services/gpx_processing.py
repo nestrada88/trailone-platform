@@ -260,7 +260,6 @@ def generate_waypoints(points, prefix: str, step_size: float, distance_method: s
     halfway_distance = total_distance / 2
     step_meters = step_size * 1000
     next_marker_distance = step_meters
-    km_index = 1
     halfway_added = False
 
     for index in range(1, dataset_size):
@@ -279,11 +278,17 @@ def generate_waypoints(points, prefix: str, step_size: float, distance_method: s
                 break
             fraction = distance_into_segment / segment_distance
             lat, lon, ele = interpolate_point(p1, p2, fraction)
+            marker_distance_km = int(next_marker_distance / 1000)
             waypoints.append(
-                create_waypoint(lat, lon, ele, f'{prefix}_KM{km_index:02d}', f'{km_index} km Marker')
+                create_waypoint(
+                    lat,
+                    lon,
+                    ele,
+                    f'{prefix}_KM{marker_distance_km:02d}',
+                    f'{marker_distance_km} km Marker',
+                )
             )
-            km_index += 1
-            next_marker_distance = km_index * step_meters
+            next_marker_distance += step_meters
 
         if not halfway_added and cumulative_distance + segment_distance >= halfway_distance:
             distance_into_segment = halfway_distance - cumulative_distance
