@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "specification": "trailone.brand.color-palette",
+  "version": "1.0.0",
+  "status": "APPROVED",
+  "color_space": {
+    "name": "sRGB",
+    "standard": "IEC 61966-2-1",
+    "transfer_function": "sRGB",
+    "channel_bit_depth": 8
+  },
+  "rules": {
+    "hex_format": "#RRGGBB",
+    "hex_case": "upper",
+    "rgb_range": [
+      0,
+      255
+    ],
+    "alpha": 1,
+    "canonical_json": "RFC 8785 (JCS) for signed releases",
+    "policy": "Use named tokens; prohibit silent substitutions; published approved versions are immutable",
+    "note": "Authoritative TrailOne palette approved 2026-10-14. Legacy raster RGB deviations are not approved alternatives."
+  },
+  "source_images": [
+    {
+      "file": "T1001.png",
+      "sha256": "2ee96b0ea04605849b5e933dd2f84cbebbd93163e400c957554fd70661f2b184"
+    },
+    {
+      "file": "T1002.png",
+      "sha256": "d60e62af275e45828d52c33ae475d7bc2b6c2daac218cb85c37876f698077fe0"
+    },
+    {
+      "file": "T1003.png",
+      "sha256": "c08f4506346002c7e0d20b3352b71ebf0e88bd4fe5c610f57d98dcb45841b199"
+    },
+    {
+      "file": "T1004.png",
+      "sha256": "14bd0fbd855bbad7810dfee515f9e7b8ecaaa23e490ef60619d10e9d5eb835ba"
+    }
+  ],
+  "colors": {
+    "forest": {
+      "hex": "#04291B",
+      "rgb": [
+        4,
+        41,
+        27
+      ],
+      "alpha": 1,
+      "role": "Outer border, foreground, silhouette, wordmark field"
+    },
+    "mountain": {
+      "hex": "#4D6C5A",
+      "rgb": [
+        77,
+        108,
+        90
+      ],
+      "alpha": 1,
+      "role": "Distant mountain layer"
+    },
+    "mountain_dark": {
+      "hex": "#496856",
+      "rgb": [
+        73,
+        104,
+        86
+      ],
+      "alpha": 1,
+      "role": "Secondary mountain layer"
+    },
+    "sage": {
+      "hex": "#839469",
+      "rgb": [
+        131,
+        148,
+        105
+      ],
+      "alpha": 1,
+      "role": "Illuminated terrain"
+    },
+    "ochre": {
+      "hex": "#D49B39",
+      "rgb": [
+        212,
+        155,
+        57
+      ],
+      "alpha": 1,
+      "role": "Sun and accent"
+    },
+    "sandstone": {
+      "hex": "#EACF9A",
+      "rgb": [
+        234,
+        207,
+        154
+      ],
+      "alpha": 1,
+      "role": "Sky"
+    },
+    "ivory": {
+      "hex": "#FBEFD7",
+      "rgb": [
+        251,
+        239,
+        215
+      ],
+      "alpha": 1,
+      "role": "Trail, cloud, lettering, inner border"
+    },
+    "canvas": {
+      "hex": "#FEFEFE",
+      "rgb": [
+        254,
+        254,
+        254
+      ],
+      "alpha": 1,
+      "role": "Raster external background; not transparency"
+    }
+  },
+  "approval": {
+    "authority": "TrailOne brand owner (approval in BRAND project conversation)",
+    "approved_at": "2026-10-14",
+    "signature_file": null,
+    "release_status": "approved_unsigned",
+    "change_policy": "Explicit approval and new version required for any palette revision."
+  }
+}
