@@ -1,28 +1,36 @@
-import WaypointGenerator from "./components/WaypointGenerator";
+import GuidedGPXWorkflow from "./components/GuidedGPXWorkflow";
 
 export default function App() {
   return (
-    <main className="app-shell">
-      <header className="hero">
-        <div>
-          <p className="eyebrow">TrailOne</p>
-          <h1>GPX Toolkit</h1>
-          <p className="lead">
-            GPX trail enrichment utility for hiking datasets. It ingests a GPX track, validates structural integrity,
-            computes elevation statistics and cumulative 3D distance, generates trail markers at fixed intervals and
-            key topographic locations, and outputs an enriched GPX 1.1 file that preserves original geometry while
-            adding structured navigation metadata.
-          </p>
-          <ul>
-            <li>3D cumulative path distance computation</li>
-            <li>Elevation statistics and terrain metrics</li>
-            <li>Automated waypoint interpolation</li>
-            <li>Topographic marker generation</li>
-            <li>GPX 1.1 compliant enriched output</li>
-          </ul>
+    <div className="site-shell">
+      <a className="skip-link" href="#workflow">Skip to GPX workflow</a>
+      <header className="site-header">
+        <div className="site-header-inner">
+          <div className="brand-lockup">
+            <img className="brand-logo" src="/trailone-primary.png" alt="TrailOne official source emblem" width="72" height="72" />
+            <div className="brand-words">
+              <span className="brand-name">TrailOne</span>
+              <span className="brand-subtitle">GPX TOOLKIT / TRAIL PROCESSING</span>
+            </div>
+          </div>
+          <span className="header-detail">ROUTE DATA · WAYPOINTS · GPX 1.1</span>
         </div>
       </header>
-      <WaypointGenerator />
-    </main>
+      <main id="workflow" className="app-container">
+        <div className="heading-block">
+          <div>
+            <p className="eyebrow">TRAILONE / NAVIGATION DATA</p>
+            <h1>Process a GPX track</h1>
+            <p className="intro">Import, validate, configure, generate, review, and export waypoints without altering the source route geometry.</p>
+          </div>
+          <p className="document-identifier">TO / GPX / 01</p>
+        </div>
+        <GuidedGPXWorkflow />
+        <footer className="site-footer">
+          <span>TrailOne GPX Toolkit</span>
+          <span>Navigation data requires independent field verification.</span>
+        </footer>
+      </main>
+    </div>
   );
 }
